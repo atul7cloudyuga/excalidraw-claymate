@@ -54,7 +54,7 @@ const Claymate: React.FC = () => {
     snapshots.forEach((snapshot) => {
       //gif.addFrame(snapshot.imageData,{delay: 2000});
       //gif.addFrame(snapshot.imageData);
-      gif.addFrame(snapshot.imageData, {delay: 1400});
+      gif.addFrame(snapshot.imageData, {delay: 1500});
     });
     gif.on("finished", async (blob: Blob) => {
       await fileSave(blob, {
