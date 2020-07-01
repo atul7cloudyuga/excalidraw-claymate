@@ -52,7 +52,7 @@ const Claymate: React.FC = () => {
   const exportGif = () => {
     const gif = new GIF();
     snapshots.forEach((snapshot) => {
-      gif.addFrame(snapshot.imageData);
+      gif.addFrame(snapshot.imageData,{delay: 200});
     });
     gif.on("finished", async (blob: Blob) => {
       await fileSave(blob, {
